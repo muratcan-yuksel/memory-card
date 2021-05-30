@@ -23,7 +23,7 @@ const Cards = () => {
   const foo2 = (e) => {
     console.log(e.target.id);
     //this shuffles the level1 array
-    setLevel1(level1.sort(() => Math.random() - 0.5));
+    setLevel1([...level1.sort(() => Math.random() - 0.5)]);
     console.log(level1);
   };
   //doing the map here so that I can return elements in a bootstrap grid
