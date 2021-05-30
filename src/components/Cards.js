@@ -29,13 +29,16 @@ const Cards = () => {
   //doing the map here so that I can return elements in a bootstrap grid
   const level1Cards = level1.map((item) => {
     return (
-      <div key={item.id} className="col mt-5 ms-5">
-        <div className="card" style={{ width: "18rem" }}>
+      <div
+        key={item.id}
+        className="col-sm-4 col-md-4 col-lg  mt-5 ms-5 text-center"
+      >
+        <div className="card h-100 mx-auto w-100">
           <img
             onClick={foo2}
             src={item.img}
             id={item.id}
-            className="card-img-top"
+            className="card-img-top h-100"
             alt="a philosopher"
           ></img>
           <div className="card-body">
