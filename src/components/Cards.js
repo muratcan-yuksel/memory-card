@@ -11,11 +11,20 @@ const Cards = () => {
   //   const tryLog=()=>{
   //       setLevel1()
   //   }
-
+  const foo = () => {
+    level1.map((item) => {
+      return <li key={item.id}> {item.title}</li>;
+    });
+  };
   return (
     <div>
       yoho
       <div>{level1[0].id}</div>
+      <ul>
+        {level1.map((item) => {
+          return <li key={item.id}> {item.title}</li>;
+        })}
+      </ul>
     </div>
   );
 };
