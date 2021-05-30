@@ -26,7 +26,7 @@ const Cards = () => {
   //doing the map here so that I can return elements in a bootstrap grid
   const level1Cards = level1.map((item) => {
     return (
-      <div key={item.id} className="col-lg-3 col-sm-6 col-md-6 mt-5 ms-5">
+      <div key={item.id} className="col mt-5 ms-5">
         <div className="card" style={{ width: "18rem" }}>
           <img
             onClick={foo2}
