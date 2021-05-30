@@ -14,32 +14,30 @@ const Cards = () => {
     { title: "Tyrasymakhos", img: "plato", id: uniqid() },
     { title: "Socrates", img: "plato", id: uniqid() },
   ]);
+  //doing the map here so that I can return elements in a bootstrap grid
   const foo = level1.map((item) => {
-    return <div className="col">{item.title}</div>;
+    return (
+      <div className="col-lg-3 col-sm-6 col-md-6">
+        <div className="card" style={{ width: "18rem" }}>
+          <img
+            src={item.img}
+            className="card-img-top"
+            alt="a philosopher"
+          ></img>
+          <div className="card-body">
+            <p className="card-text">{item.title}</p>
+          </div>
+        </div>
+      </div>
+    );
   });
   return (
     <div>
-      <div>{level1[0].id}</div>
-
-      <div className="row">{foo}</div>
+      <div class="container">
+        <div className="row">{foo}</div>
+      </div>
     </div>
   );
 };
 
 export default Cards;
-
-{
-  /* <div classNameName="container">
-              <div classNameName="row">
-                <div classNameName="card col-4" style={{ width: "18rem" }}>
-                  <img src={plato} classNameName="card-img-top" alt="..."></img>
-                  <div classNameName="card-body">
-                    <p classNameName="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div> */
-}
