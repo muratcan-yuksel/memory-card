@@ -6,7 +6,7 @@ const Cards = () => {
   const [level1, setLevel1] = useState([
     {
       title: "Plato",
-      img: "plato",
+      img: plato,
       id: uniqid(),
     },
     { title: "Aristotle", img: "plato", id: uniqid() },
@@ -24,7 +24,7 @@ const Cards = () => {
             <div>
               <li key={item.id}>
                 {" "}
-                {item.title}, {item.id}, <img src={plato} />
+                {item.title}, {item.id}, <img src={item.img} />
               </li>
             </div>
           );
