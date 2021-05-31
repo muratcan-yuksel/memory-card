@@ -25,21 +25,41 @@ const Cards = () => {
     //this shuffles the level1 array
     setLevel1([...level1.sort(() => Math.random() - 0.5)]);
     console.log(level1);
-    //use session storage
-    sessionStorage.setItem("selectedId", e.target.id);
-  };
-  useEffect(() => {
-    console.log("rendered");
-    //get the id in session storage
-    console.log(sessionStorage.getItem("selectedId"));
     //map through the level1 array and find the object that corresponds to the id in question
     level1.map((item) => {
-      if (item.id === sessionStorage.getItem("selectedId")) {
+      if (item.id === e.target.id) {
         console.log(item);
+        //add the object into the selectedItems array
         setSelectedItems([item, ...selectedItems]);
       }
     });
     console.log(selectedItems);
+  };
+
+  const checkDuplicate = () => {
+    let map = {};
+    let result = false;
+    for (let i = 0; i < selectedItems.length; i++) {
+      // check if object contains entry with this element as key
+      if (map[selectedItems[i].title]) {
+        result = true;
+        // terminate the loop
+        break;
+      }
+      // add entry in object with the element as key
+      map[selectedItems[i].title] = true;
+    }
+    if (result) {
+      console.log("Array contains duplicate elements");
+    } else {
+      console.log("Array does not contain duplicate elements");
+    }
+  };
+
+  useEffect(() => {
+    console.log("rendered");
+    console.log(selectedItems);
+    checkDuplicate();
   }, [level1]);
 
   //doing the map here so that I can return elements in a bootstrap grid
@@ -64,6 +84,7 @@ const Cards = () => {
       </div>
     );
   });
+  console.log(selectedItems);
 
   return (
     <div>
