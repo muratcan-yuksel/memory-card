@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import uniqid from "uniqid";
 import plato from "../images/plato.jpeg";
 import aristotle from "../images/aristotle.jpeg";
@@ -20,12 +20,28 @@ const Cards = () => {
   //selected items array
   const [selectedItems, setSelectedItems] = useState([]);
 
-  const foo2 = (e) => {
+  const shuffle = (e) => {
     console.log(e.target.id);
     //this shuffles the level1 array
     setLevel1([...level1.sort(() => Math.random() - 0.5)]);
     console.log(level1);
+    //use session storage
+    sessionStorage.setItem("selectedId", e.target.id);
   };
+  useEffect(() => {
+    console.log("rendered");
+    //get the id in session storage
+    console.log(sessionStorage.getItem("selectedId"));
+    //map through the level1 array and find the object that corresponds to the id in question
+    level1.map((item) => {
+      if (item.id === sessionStorage.getItem("selectedId")) {
+        console.log(item);
+        setSelectedItems([item, ...selectedItems]);
+      }
+    });
+    console.log(selectedItems);
+  }, [level1]);
+
   //doing the map here so that I can return elements in a bootstrap grid
   const level1Cards = level1.map((item) => {
     return (
@@ -35,7 +51,7 @@ const Cards = () => {
       >
         <div className="card h-100 mx-auto w-100 ">
           <img
-            onClick={foo2}
+            onClick={shuffle}
             src={item.img}
             id={item.id}
             className="card-img-top h-100 "
@@ -48,6 +64,7 @@ const Cards = () => {
       </div>
     );
   });
+
   return (
     <div>
       <div className="container">
