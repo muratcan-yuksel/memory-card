@@ -36,6 +36,7 @@ const Cards = () => {
     console.log(selectedItems);
   };
 
+  //checks if selecteditems array contains the same element twice
   const checkDuplicate = () => {
     let map = {};
     let result = false;
@@ -50,15 +51,18 @@ const Cards = () => {
       map[selectedItems[i].title] = true;
     }
     if (result) {
-      console.log("Array contains duplicate elements");
+      console.log("Array contains duplicate elements, Game Over");
     } else {
-      console.log("Array does not contain duplicate elements");
+      console.log(
+        "Array does not contain duplicate elements, Nothing to see here, move on."
+      );
     }
   };
 
   useEffect(() => {
     console.log("rendered");
     console.log(selectedItems);
+    //call checkduplicate function
     checkDuplicate();
   }, [level1]);
 
