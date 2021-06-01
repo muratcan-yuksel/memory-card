@@ -66,7 +66,7 @@ const Cards = (props) => {
     }
   };
   const sendData = () => {
-    props.fromChild("data sent by cards");
+    props.fromChild(currentScore);
   };
 
   useEffect(() => {
@@ -104,6 +104,9 @@ const Cards = (props) => {
   });
   console.log(selectedItems);
   console.log(currentScore);
+  //for some reason, this solved the problem of first click not sending the data to App.js
+  //but also it gives an error on the console. But it compiles so...
+  sendData();
 
   return (
     <div>

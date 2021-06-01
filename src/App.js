@@ -5,6 +5,7 @@ import "./style.css";
 
 const App = (props) => {
   const [data, setData] = useState("some data");
+  console.log("here's " + data);
 
   const handleCallback = (childData) => {
     setData(childData);
