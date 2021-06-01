@@ -62,7 +62,7 @@ const Cards = (props) => {
         "Array does not contain duplicate elements, Nothing to see here, move on."
       );
       setCurrentScore(currentScore + 1);
-      if (bestScore >= currentScore) {
+      if (currentScore === bestScore) {
         setBestScore(bestScore + 1);
       }
       console.log(currentScore);
