@@ -5,7 +5,7 @@ import aristotle from "../images/aristotle.jpeg";
 import thrasymachus from "../images/thrasymachus.jpeg";
 import socrates from "../images/socrates.jpg";
 
-const Cards = () => {
+const Cards = (props) => {
   //initial philosophers array
   const [level1, setLevel1] = useState([
     {
@@ -65,6 +65,9 @@ const Cards = () => {
       console.log(currentScore);
     }
   };
+  const sendData = () => {
+    props.fromChild("data sent by cards");
+  };
 
   useEffect(() => {
     //call checkduplicate function
@@ -74,6 +77,7 @@ const Cards = () => {
     if (currentScore === level1.length - 1) {
       alert("next level");
     }
+    sendData();
   }, [level1]);
 
   //doing the map here so that I can return elements in a bootstrap grid

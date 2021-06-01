@@ -6,10 +6,14 @@ import "./style.css";
 const App = (props) => {
   const [data, setData] = useState("some data");
 
+  const handleCallback = (childData) => {
+    setData(childData);
+  };
+
   return (
     <div>
       <ScoreBoard parentData={data} />
-      <Cards />
+      <Cards fromChild={handleCallback} />
     </div>
   );
 };
