@@ -20,7 +20,7 @@ const Cards = (props) => {
   //selected items array
   const [selectedItems, setSelectedItems] = useState([]);
   const [currentScore, setCurrentScore] = useState(0);
-  const [bestScore, setBestScore] = useState(0);
+  // const [bestScore, setBestScore] = useState(0);
 
   const shuffle = (e) => {
     //this shuffles the level1 array
