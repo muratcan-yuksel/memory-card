@@ -4,16 +4,18 @@ import ScoreBoard from "./components/ScoreBoard";
 import "./style.css";
 
 const App = (props) => {
-  const [data, setData] = useState("some data");
-  console.log("here's " + data);
+  const [current, setCurrent] = useState("some data");
+  const [best, setBest] = useState();
+  console.log("here's " + current);
 
   const handleCallback = (childData) => {
-    setData(childData);
+    setCurrent(childData.currentScore);
+    setBest(childData.bestScore);
   };
 
   return (
     <div>
-      <ScoreBoard parentData={data} />
+      <ScoreBoard currentData={current} bestData={best} />
       <Cards fromChild={handleCallback} />
     </div>
   );

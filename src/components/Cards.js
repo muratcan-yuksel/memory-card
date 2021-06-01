@@ -62,11 +62,14 @@ const Cards = (props) => {
         "Array does not contain duplicate elements, Nothing to see here, move on."
       );
       setCurrentScore(currentScore + 1);
+      if (bestScore >= currentScore) {
+        setBestScore(bestScore + 1);
+      }
       console.log(currentScore);
     }
   };
   const sendData = () => {
-    props.fromChild(currentScore);
+    props.fromChild({ currentScore, bestScore });
   };
 
   useEffect(() => {
@@ -104,6 +107,7 @@ const Cards = (props) => {
   });
   console.log(selectedItems);
   console.log(currentScore);
+  console.log(bestScore);
   //for some reason, this solved the problem of first click not sending the data to App.js
   //but also it gives an error on the console. But it compiles so...
   sendData();
