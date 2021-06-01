@@ -52,6 +52,8 @@ const Cards = () => {
     }
     if (result) {
       console.log("Array contains duplicate elements, Game Over");
+      //empty the selected items array
+      setSelectedItems((selectedItems) => (selectedItems = []));
     } else {
       console.log(
         "Array does not contain duplicate elements, Nothing to see here, move on."
