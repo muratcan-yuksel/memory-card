@@ -56,6 +56,7 @@ const Cards = () => {
       //empty the selected items array
       setSelectedItems((selectedItems) => (selectedItems = []));
       setCurrentScore((currentScore) => (currentScore = 0));
+      //if I don't do this, the score starts with 1 on mount
     } else if (result === false && selectedItems.length !== 0) {
       console.log(
         "Array does not contain duplicate elements, Nothing to see here, move on."
@@ -68,6 +69,10 @@ const Cards = () => {
   useEffect(() => {
     //call checkduplicate function
     checkDuplicate();
+    //a dirty solution, otherwise, I have to click once more to get the alert
+    if (currentScore == level1.length - 1) {
+      alert("next level");
+    }
   }, [level1]);
 
   //doing the map here so that I can return elements in a bootstrap grid
