@@ -69,8 +69,9 @@ const Cards = () => {
   useEffect(() => {
     //call checkduplicate function
     checkDuplicate();
+    //when the score reaches to the array's length, alert game over
     //a dirty solution, otherwise, I have to click once more to get the alert
-    if (currentScore == level1.length - 1) {
+    if (currentScore === level1.length - 1) {
       alert("next level");
     }
   }, [level1]);
