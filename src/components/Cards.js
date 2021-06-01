@@ -19,6 +19,8 @@ const Cards = () => {
   ]);
   //selected items array
   const [selectedItems, setSelectedItems] = useState([]);
+  const [currentScore, setCurrentScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
 
   const shuffle = (e) => {
     console.log(e.target.id);
@@ -58,6 +60,8 @@ const Cards = () => {
       console.log(
         "Array does not contain duplicate elements, Nothing to see here, move on."
       );
+      setCurrentScore(currentScore + 1);
+      console.log(currentScore);
     }
   };
 

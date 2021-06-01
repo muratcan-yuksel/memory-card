@@ -7,7 +7,7 @@ const ScoreBoard = () => {
       <div className="container">
         <div className="row">
           <div className="col-6 border borderprimary text-center">
-            Currect Score:
+            Current Score:
           </div>
           <div className="col-6 border border-danger text-center">
             Best Score:{" "}
