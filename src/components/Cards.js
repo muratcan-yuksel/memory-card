@@ -23,7 +23,6 @@ const Cards = () => {
   const [bestScore, setBestScore] = useState(0);
 
   const shuffle = (e) => {
-    console.log(e.target.id);
     //this shuffles the level1 array
     setLevel1([...level1.sort(() => Math.random() - 0.5)]);
     console.log(level1);
@@ -35,7 +34,6 @@ const Cards = () => {
         setSelectedItems([item, ...selectedItems]);
       }
     });
-    console.log(selectedItems);
   };
 
   //checks if selecteditems array contains the same element twice
@@ -52,11 +50,13 @@ const Cards = () => {
       // add entry in object with the element as key
       map[selectedItems[i].title] = true;
     }
+
     if (result) {
       console.log("Array contains duplicate elements, Game Over");
       //empty the selected items array
       setSelectedItems((selectedItems) => (selectedItems = []));
-    } else {
+      setCurrentScore((currentScore) => (currentScore = 0));
+    } else if (result === false && selectedItems.length !== 0) {
       console.log(
         "Array does not contain duplicate elements, Nothing to see here, move on."
       );
@@ -66,8 +66,6 @@ const Cards = () => {
   };
 
   useEffect(() => {
-    console.log("rendered");
-    console.log(selectedItems);
     //call checkduplicate function
     checkDuplicate();
   }, [level1]);
@@ -95,6 +93,7 @@ const Cards = () => {
     );
   });
   console.log(selectedItems);
+  console.log(currentScore);
 
   return (
     <div>
