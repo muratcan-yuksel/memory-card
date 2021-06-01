@@ -1,2 +1,0 @@
-(this["webpackJsonpmemory-card"]=this["webpackJsonpmemory-card"]||[]).push([[0],{9:function(e,t,r){"use strict";r.r(t);var c=r(0),n=r.n(c),o=r(3),s=r.n(o),d=r(1),i=function(){return Object(d.jsx)("div",{children:"yow"})};s.a.render(Object(d.jsx)(n.a.StrictMode,{children:Object(d.jsx)(i,{})}),document.getElementById("root"))}},[[9,1,2]]]);
-//# sourceMappingURL=main.0dde0efa.chunk.js.map
