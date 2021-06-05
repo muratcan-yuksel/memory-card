@@ -6,8 +6,7 @@ import thrasymachus from "../images/thrasymachus.jpeg";
 import socrates from "../images/socrates.jpg";
 
 const Cards = (props) => {
-  //initial philosophers array
-  const [level1, setLevel1] = useState([
+  const level1 = [
     {
       title: "Plato",
       img: plato,
@@ -16,18 +15,21 @@ const Cards = (props) => {
     { title: "Aristotle", img: aristotle, id: uniqid() },
     { title: "Thrasymachus", img: thrasymachus, id: uniqid() },
     { title: "Socrates", img: socrates, id: uniqid() },
-  ]);
+  ];
+
+  //initial philosophers array
+  const [images, setImages] = useState(level1);
   //selected items array
   const [selectedItems, setSelectedItems] = useState([]);
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
 
   const shuffle = (e) => {
-    //this shuffles the level1 array
-    setLevel1([...level1.sort(() => Math.random() - 0.5)]);
-    console.log(level1);
-    //map through the level1 array and find the object that corresponds to the id in question
-    level1.map((item) => {
+    //this shuffles the images array
+    setImages([...images.sort(() => Math.random() - 0.5)]);
+    console.log(images);
+    //map through the images array and find the object that corresponds to the id in question
+    images.map((item) => {
       if (item.id === e.target.id) {
         console.log(item);
         //add the object into the selectedItems array
@@ -77,14 +79,14 @@ const Cards = (props) => {
     checkDuplicate();
     //when the score reaches to the array's length, alert game over
     //a dirty solution, otherwise, I have to click once more to get the alert
-    if (currentScore === level1.length - 1) {
+    if (currentScore === images.length - 1) {
       alert("next level");
     }
     sendData();
-  }, [level1]);
+  }, [images]);
 
   //doing the map here so that I can return elements in a bootstrap grid
-  const level1Cards = level1.map((item) => {
+  const imagesCards = images.map((item) => {
     return (
       <div
         key={item.id}
@@ -115,7 +117,7 @@ const Cards = (props) => {
   return (
     <div>
       <div className="container">
-        <div className="row">{level1Cards}</div>
+        <div className="row">{imagesCards}</div>
       </div>
     </div>
   );
