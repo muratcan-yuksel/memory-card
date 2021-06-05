@@ -92,6 +92,29 @@ const Cards = (props) => {
     { title: "Carl Gustav Jung", img: jung, id: uniqid() },
     { title: "Frantz Fanon", img: fanon, id: uniqid() },
   ];
+  //level4 array
+
+  const level4 = [
+    { title: "Jacques Derrida", img: derrida, id: uniqid() },
+    { title: "Julia Kristeva", img: kristeva, id: uniqid() },
+    { title: "Louis Althusser", img: althusser, id: uniqid() },
+    { title: "Alain Badiou", img: badiou, id: uniqid() },
+    { title: "Roland Barthes", img: barthes, id: uniqid() },
+    { title: "Kalevi Kull", img: kull, id: uniqid() },
+    { title: "Jakob von Uexküll", img: uexküll, id: uniqid() },
+    { title: "Guy Debord", img: debord, id: uniqid() },
+    { title: "Félix Guattari", img: guattari, id: uniqid() },
+    { title: "Gilles Deleuze", img: deleuze, id: uniqid() },
+    { title: "Jacques Lacan", img: lacan, id: uniqid() },
+    { title: "Slavoj Zizek", img: zizek, id: uniqid() },
+    { title: "Ferdinand de Saussure", img: saussure, id: uniqid() },
+    { title: "Umberto Eco", img: eco, id: uniqid() },
+    { title: "Juri Lotman", img: lotman, id: uniqid() },
+    { title: "Mihhail Lotman", img: mlotman, id: uniqid() },
+    { title: "Thomas A. Sebeok", img: sebeok, id: uniqid() },
+    { title: "Nick Land", img: land, id: uniqid() },
+    { title: "Peeter Torop", img: torop, id: uniqid() },
+  ];
 
   //initial philosophers array
   const [images, setImages] = useState(level1);
