@@ -4,6 +4,41 @@ import plato from "../images/plato.jpeg";
 import aristotle from "../images/aristotle.jpeg";
 import thrasymachus from "../images/thrasymachus.jpeg";
 import socrates from "../images/socrates.jpg";
+//Germans
+import kant from "../images/kant.jpg";
+import hegel from "../images/hegel.jpeg";
+import schelling from "../images/schelling.jpg";
+import fichte from "../images/fichte.jpg";
+import schopenhauer from "../images/schopenhauer.jpg";
+import marx from "../images/marx.jpg";
+import engels from "../images/engels.jpeg";
+import nietzsche from "../images/nietzsche.jpeg";
+import feuerbach from "../images/feuerbach.jpeg";
+import benjamin from "../images/benjamin.jpg";
+import heidegger from "../images/heidegger.jpeg";
+import adorno from "../images/adorno.jpeg";
+//French
+import descartes from "../images/descartes.jpg";
+import leviStrauss from "../images/leviStrauss.png";
+import derrida from "../images/derrida.jpg";
+import baudrillard from "../images/baudrillard.jpg";
+import kristeva from "../images/kristeva.jpg";
+import sartre from "../images/sartre.jpeg";
+import camus from "../images/camus.jpg";
+import althusser from "../images/althusser.jpg";
+import badiou from "../images/badiou.jpg";
+import barthes from "../images/barthes.jpg";
+import kojeve from "../images/kojeve.jpg";
+import debord from "../images/debord.jpeg";
+import guattari from "../images/guattari.jpg";
+import deleuze from "../images/deleuze.jpeg";
+import lacan from "../images/lacan.jpg";
+//
+import zizek from "../images/zizek.jpg";
+import freud from "../images/freud.jpeg";
+import jung from "../images/jung.jpeg";
+import fanon from "../images/fanon.jpg";
+import saussure from "../images/saussure.png";
 
 const Cards = (props) => {
   const level1 = [
