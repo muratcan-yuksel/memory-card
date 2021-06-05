@@ -75,6 +75,24 @@ const Cards = (props) => {
     { title: "Friedrich Engels", img: engels, id: uniqid() },
   ];
 
+  //level3 array
+  const level3 = [
+    { title: "Friedrich Nietzsche", img: nietzsche, id: uniqid() },
+    { title: "Ludwig Feuerbach", img: feuerbach, id: uniqid() },
+    { title: "Marting Heidegger", img: heidegger, id: uniqid() },
+    { title: "Ludwig Wittgenstein", img: wittgenstein, id: uniqid() },
+    { title: "Walter Benjamin", img: benjamin, id: uniqid() },
+    { title: "Theodor W. Adorno", img: adorno, id: uniqid() },
+    { title: "Claude Lévi-Strauss", img: leviStrauss, id: uniqid() },
+    { title: "Jean Baudrillard", img: baudrillard, id: uniqid() },
+    { title: "Jean-Paul Sartre", img: sartre, id: uniqid() },
+    { title: "Albert Camus", img: camus, id: uniqid() },
+    { title: "Alexandre Kojève", img: kojeve, id: uniqid() },
+    { title: "Sigmund Freud", img: freud, id: uniqid() },
+    { title: "Carl Gustav Jung", img: jung, id: uniqid() },
+    { title: "Frantz Fanon", img: fanon, id: uniqid() },
+  ];
+
   //initial philosophers array
   const [images, setImages] = useState(level1);
   //selected items array
