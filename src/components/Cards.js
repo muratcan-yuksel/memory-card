@@ -22,14 +22,14 @@ import wittgenstein from "../images/wittgenstein.jpg";
 import benjamin from "../images/benjamin.jpg";
 import adorno from "../images/adorno.jpg";
 import leviStrauss from "../images/leviStrauss.png";
-import baudrillard from "../images/baudrillard.jpg";
+import baudrillard from "../images/baudrillard.jpeg";
 import sartre from "../images/sartre.jpeg";
 import camus from "../images/camus.jpg";
 import kojeve from "../images/kojeve.jpg";
 import freud from "../images/freud.jpeg";
 import jung from "../images/jung.jpeg";
 import fanon from "../images/fanon.jpg";
-//level4- 18
+//level4- 19
 import derrida from "../images/derrida.jpg";
 import kristeva from "../images/kristeva.jpg";
 import althusser from "../images/althusser.jpg";
@@ -48,8 +48,10 @@ import lotman from "../images/lotman.jpeg";
 import mlotman from "../images/mlotman.jpeg";
 import sebeok from "../images/sebeok.jpg";
 import land from "../images/land.jpg";
+import torop from "../images/torop.jpeg";
 
 const Cards = (props) => {
+  //level1 array
   const level1 = [
     {
       title: "Plato",
@@ -59,6 +61,18 @@ const Cards = (props) => {
     { title: "Aristotle", img: aristotle, id: uniqid() },
     { title: "Thrasymachus", img: thrasymachus, id: uniqid() },
     { title: "Socrates", img: socrates, id: uniqid() },
+  ];
+  //level2 array
+
+  const level2 = [
+    { title: "Immanuel Kant", img: kant, id: uniqid() },
+    { title: "G.W.F. Hegel", img: hegel, id: uniqid() },
+    { title: "F.W.J. Schelling", img: schelling, id: uniqid() },
+    { title: "Johann Gottlieb Fichte", img: fichte, id: uniqid() },
+    { title: "René Descartes", img: descartes, id: uniqid() },
+    { title: "Arthur Schopenhauer", img: schopenhauer, id: uniqid() },
+    { title: "Karl Marx", img: marx, id: uniqid() },
+    { title: "Friedrich Engels", img: engels, id: uniqid() },
   ];
 
   //initial philosophers array
