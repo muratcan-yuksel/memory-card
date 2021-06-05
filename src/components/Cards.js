@@ -58,21 +58,31 @@ const Cards = (props) => {
       img: plato,
       id: uniqid(),
     },
-    { title: "Aristotle", img: aristotle, id: uniqid() },
-    { title: "Thrasymachus", img: thrasymachus, id: uniqid() },
-    { title: "Socrates", img: socrates, id: uniqid() },
+    { title: "Aristotle", img: aristotle, id: uniqid(), level: "lvl1" },
+    { title: "Thrasymachus", img: thrasymachus, id: uniqid(), level: "lvl1" },
+    { title: "Socrates", img: socrates, id: uniqid(), level: "lvl1" },
   ];
   //level2 array
 
   const level2 = [
-    { title: "Immanuel Kant", img: kant, id: uniqid() },
-    { title: "G.W.F. Hegel", img: hegel, id: uniqid() },
-    { title: "F.W.J. Schelling", img: schelling, id: uniqid() },
-    { title: "Johann Gottlieb Fichte", img: fichte, id: uniqid() },
-    { title: "René Descartes", img: descartes, id: uniqid() },
-    { title: "Arthur Schopenhauer", img: schopenhauer, id: uniqid() },
-    { title: "Karl Marx", img: marx, id: uniqid() },
-    { title: "Friedrich Engels", img: engels, id: uniqid() },
+    { title: "Immanuel Kant", img: kant, id: uniqid(), level: "lvl2" },
+    { title: "G.W.F. Hegel", img: hegel, id: uniqid(), level: "lvl2" },
+    { title: "F.W.J. Schelling", img: schelling, id: uniqid(), level: "lvl2" },
+    {
+      title: "Johann Gottlieb Fichte",
+      img: fichte,
+      id: uniqid(),
+      level: "lvl2",
+    },
+    { title: "René Descartes", img: descartes, id: uniqid(), level: "lvl2" },
+    {
+      title: "Arthur Schopenhauer",
+      img: schopenhauer,
+      id: uniqid(),
+      level: "lvl2",
+    },
+    { title: "Karl Marx", img: marx, id: uniqid(), level: "lvl2" },
+    { title: "Friedrich Engels", img: engels, id: uniqid(), level: "lvl2" },
   ];
 
   //level3 array
@@ -116,7 +126,7 @@ const Cards = (props) => {
   ];
 
   //initial philosophers array
-  const [images, setImages] = useState(level2);
+  const [images, setImages] = useState(level1);
   //selected items array
   const [selectedItems, setSelectedItems] = useState([]);
   const [currentScore, setCurrentScore] = useState(0);
@@ -125,11 +135,9 @@ const Cards = (props) => {
   const shuffle = (e) => {
     //this shuffles the images array
     setImages([...images.sort(() => Math.random() - 0.5)]);
-    console.log(images);
     //map through the images array and find the object that corresponds to the id in question
     images.map((item) => {
       if (item.id === e.target.id) {
-        console.log(item);
         //add the object into the selectedItems array
         setSelectedItems([item, ...selectedItems]);
       }
@@ -165,7 +173,6 @@ const Cards = (props) => {
       if (currentScore === bestScore) {
         setBestScore(bestScore + 1);
       }
-      console.log(currentScore);
     }
   };
   const sendData = () => {
@@ -178,7 +185,17 @@ const Cards = (props) => {
     //when the score reaches to the array's length, alert game over
     //a dirty solution, otherwise, I have to click once more to get the alert
     if (currentScore === images.length - 1) {
-      alert("next level");
+      // alert("next level");
+
+      images.forEach(function (item) {
+        if (Object.values(item).includes("lvl1")) {
+          setImages(level2);
+          console.log(images.length);
+        } else if (Object.values(item).includes("lvl2")) {
+          setImages(level3);
+          console.log(images.length);
+        }
+      });
     }
     sendData();
   }, [images]);
