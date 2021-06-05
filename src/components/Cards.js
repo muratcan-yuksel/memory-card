@@ -93,7 +93,6 @@ const Cards = (props) => {
     { title: "Frantz Fanon", img: fanon, id: uniqid() },
   ];
   //level4 array
-
   const level4 = [
     { title: "Jacques Derrida", img: derrida, id: uniqid() },
     { title: "Julia Kristeva", img: kristeva, id: uniqid() },
@@ -117,7 +116,7 @@ const Cards = (props) => {
   ];
 
   //initial philosophers array
-  const [images, setImages] = useState(level1);
+  const [images, setImages] = useState(level2);
   //selected items array
   const [selectedItems, setSelectedItems] = useState([]);
   const [currentScore, setCurrentScore] = useState(0);
@@ -189,7 +188,7 @@ const Cards = (props) => {
     return (
       <div
         key={item.id}
-        className="col-sm-4 col-md-4 col-lg  mt-5 ms-5 text-center"
+        className=" col-4 col-sm-4 col-md-3 col-lg-2  mt-5 ms-5 text-center"
       >
         <div className="card h-100 mx-auto w-100 ">
           <img
@@ -197,7 +196,7 @@ const Cards = (props) => {
             src={item.img}
             id={item.id}
             className="card-img-top h-100 "
-            alt="a philosopher"
+            alt={item.title}
           ></img>
           <div className="card-body">
             <p className="card-text">{item.title}</p>
