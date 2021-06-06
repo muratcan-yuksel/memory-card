@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/memory-card/static/css/main.b6d0124d.chunk.css",
-    "main.js": "/memory-card/static/js/main.7a8e7a83.chunk.js",
-    "main.js.map": "/memory-card/static/js/main.7a8e7a83.chunk.js.map",
+    "main.js": "/memory-card/static/js/main.e58710bf.chunk.js",
+    "main.js.map": "/memory-card/static/js/main.e58710bf.chunk.js.map",
     "runtime-main.js": "/memory-card/static/js/runtime-main.5e1d5d79.js",
     "runtime-main.js.map": "/memory-card/static/js/runtime-main.5e1d5d79.js.map",
     "static/css/2.61b4cb56.chunk.css": "/memory-card/static/css/2.61b4cb56.chunk.css",
@@ -49,6 +49,6 @@
     "static/css/2.61b4cb56.chunk.css",
     "static/js/2.37df11b0.chunk.js",
     "static/css/main.b6d0124d.chunk.css",
-    "static/js/main.7a8e7a83.chunk.js"
+    "static/js/main.e58710bf.chunk.js"
   ]
 }
