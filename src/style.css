@@ -1,8 +1,21 @@
+body {
+  background: #827f7f;
+  background: -webkit-linear-gradient(bottom left, #827f7f, #f2eeef);
+  background: -moz-linear-gradient(bottom left, #827f7f, #f2eeef);
+  background: linear-gradient(to top right, #827f7f, #f2eeef);
+}
+
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
-  background-color: #e9ecef;
   border-radius: 0.3rem;
+  background: #161618;
+  background: -webkit-linear-gradient(bottom right, #161618, #51384b);
+  background: -moz-linear-gradient(bottom right, #161618, #51384b);
+  background: linear-gradient(to top left, #161618, #51384b);
+  color: white;
+  font-weight: 900;
+  font-size: 2em;
 }
 img:hover {
   border: 5px solid #333333;
