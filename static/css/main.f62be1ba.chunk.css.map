@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/style.css"],"names":[],"mappings":"AAAA,WACE,iBAAkB,CAClB,kBAAmB,CACnB,wBAAyB,CACzB,mBACF","file":"main.f62be1ba.chunk.css","sourcesContent":[".jumbotron {\n  padding: 2rem 1rem;\n  margin-bottom: 2rem;\n  background-color: #e9ecef;\n  border-radius: 0.3rem;\n}\n"]}
