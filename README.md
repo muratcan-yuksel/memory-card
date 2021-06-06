@@ -1,4 +1,4 @@
-<h1>Philosopher Memory Game </h1>
+<h1>Philosopher Card Game </h1>
 <ul>
 <li> Choose a different philosopher each time  </li>
 <li> If you fail to do so, the game will start all over </li>
