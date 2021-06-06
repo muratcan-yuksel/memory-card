@@ -87,42 +87,67 @@ const Cards = (props) => {
 
   //level3 array
   const level3 = [
-    { title: "Friedrich Nietzsche", img: nietzsche, id: uniqid() },
-    { title: "Ludwig Feuerbach", img: feuerbach, id: uniqid() },
-    { title: "Marting Heidegger", img: heidegger, id: uniqid() },
-    { title: "Ludwig Wittgenstein", img: wittgenstein, id: uniqid() },
-    { title: "Walter Benjamin", img: benjamin, id: uniqid() },
-    { title: "Theodor W. Adorno", img: adorno, id: uniqid() },
-    { title: "Claude Lévi-Strauss", img: leviStrauss, id: uniqid() },
-    { title: "Jean Baudrillard", img: baudrillard, id: uniqid() },
-    { title: "Jean-Paul Sartre", img: sartre, id: uniqid() },
-    { title: "Albert Camus", img: camus, id: uniqid() },
-    { title: "Alexandre Kojève", img: kojeve, id: uniqid() },
-    { title: "Sigmund Freud", img: freud, id: uniqid() },
-    { title: "Carl Gustav Jung", img: jung, id: uniqid() },
-    { title: "Frantz Fanon", img: fanon, id: uniqid() },
+    {
+      title: "Friedrich Nietzsche",
+      img: nietzsche,
+      id: uniqid(),
+      level: "lvl3",
+    },
+    { title: "Ludwig Feuerbach", img: feuerbach, id: uniqid(), level: "lvl3" },
+    { title: "Marting Heidegger", img: heidegger, id: uniqid(), level: "lvl3" },
+    {
+      title: "Ludwig Wittgenstein",
+      img: wittgenstein,
+      id: uniqid(),
+      level: "lvl3",
+    },
+    { title: "Walter Benjamin", img: benjamin, id: uniqid(), level: "lvl3" },
+    { title: "Theodor W. Adorno", img: adorno, id: uniqid(), level: "lvl3" },
+    {
+      title: "Claude Lévi-Strauss",
+      img: leviStrauss,
+      id: uniqid(),
+      level: "lvl3",
+    },
+    {
+      title: "Jean Baudrillard",
+      img: baudrillard,
+      id: uniqid(),
+      level: "lvl3",
+    },
+    { title: "Jean-Paul Sartre", img: sartre, id: uniqid(), level: "lvl3" },
+    { title: "Albert Camus", img: camus, id: uniqid(), level: "lvl3" },
+    { title: "Alexandre Kojève", img: kojeve, id: uniqid(), level: "lvl3" },
+    { title: "Sigmund Freud", img: freud, id: uniqid(), level: "lvl3" },
+    { title: "Carl Gustav Jung", img: jung, id: uniqid(), level: "lvl3" },
+    { title: "Frantz Fanon", img: fanon, id: uniqid(), level: "lvl3" },
   ];
   //level4 array
   const level4 = [
-    { title: "Jacques Derrida", img: derrida, id: uniqid() },
-    { title: "Julia Kristeva", img: kristeva, id: uniqid() },
-    { title: "Louis Althusser", img: althusser, id: uniqid() },
-    { title: "Alain Badiou", img: badiou, id: uniqid() },
-    { title: "Roland Barthes", img: barthes, id: uniqid() },
-    { title: "Kalevi Kull", img: kull, id: uniqid() },
-    { title: "Jakob von Uexküll", img: uexküll, id: uniqid() },
-    { title: "Guy Debord", img: debord, id: uniqid() },
-    { title: "Félix Guattari", img: guattari, id: uniqid() },
-    { title: "Gilles Deleuze", img: deleuze, id: uniqid() },
-    { title: "Jacques Lacan", img: lacan, id: uniqid() },
-    { title: "Slavoj Zizek", img: zizek, id: uniqid() },
-    { title: "Ferdinand de Saussure", img: saussure, id: uniqid() },
-    { title: "Umberto Eco", img: eco, id: uniqid() },
-    { title: "Juri Lotman", img: lotman, id: uniqid() },
-    { title: "Mihhail Lotman", img: mlotman, id: uniqid() },
-    { title: "Thomas A. Sebeok", img: sebeok, id: uniqid() },
-    { title: "Nick Land", img: land, id: uniqid() },
-    { title: "Peeter Torop", img: torop, id: uniqid() },
+    { title: "Jacques Derrida", img: derrida, id: uniqid(), level: "lvl4" },
+    { title: "Julia Kristeva", img: kristeva, id: uniqid(), level: "lvl4" },
+    { title: "Louis Althusser", img: althusser, id: uniqid(), level: "lvl4" },
+    { title: "Alain Badiou", img: badiou, id: uniqid(), level: "lvl4" },
+    { title: "Roland Barthes", img: barthes, id: uniqid(), level: "lvl4" },
+    { title: "Kalevi Kull", img: kull, id: uniqid(), level: "lvl4" },
+    { title: "Jakob von Uexküll", img: uexküll, id: uniqid(), level: "lvl4" },
+    { title: "Guy Debord", img: debord, id: uniqid(), level: "lvl4" },
+    { title: "Félix Guattari", img: guattari, id: uniqid(), level: "lvl4" },
+    { title: "Gilles Deleuze", img: deleuze, id: uniqid(), level: "lvl4" },
+    { title: "Jacques Lacan", img: lacan, id: uniqid(), level: "lvl4" },
+    { title: "Slavoj Zizek", img: zizek, id: uniqid(), level: "lvl4" },
+    {
+      title: "Ferdinand de Saussure",
+      img: saussure,
+      id: uniqid(),
+      level: "lvl4",
+    },
+    { title: "Umberto Eco", img: eco, id: uniqid(), level: "lvl4" },
+    { title: "Juri Lotman", img: lotman, id: uniqid(), level: "lvl4" },
+    { title: "Mihhail Lotman", img: mlotman, id: uniqid(), level: "lvl4" },
+    { title: "Thomas A. Sebeok", img: sebeok, id: uniqid(), level: "lvl4" },
+    { title: "Nick Land", img: land, id: uniqid(), level: "lvl4" },
+    { title: "Peeter Torop", img: torop, id: uniqid(), level: "lvl4" },
   ];
 
   //initial philosophers array
@@ -184,19 +209,40 @@ const Cards = (props) => {
     checkDuplicate();
     //when the score reaches to the array's length, alert game over
     //a dirty solution, otherwise, I have to click once more to get the alert
-    if (currentScore === images.length - 1) {
+    if (currentScore === 3) {
       // alert("next level");
-
+      //for some reason, this method works just fine
       images.forEach(function (item) {
         if (Object.values(item).includes("lvl1")) {
           setImages(level2);
+          setCurrentScore(currentScore);
           console.log(images.length);
-        } else if (Object.values(item).includes("lvl2")) {
+        }
+      });
+    } else if (currentScore === 11) {
+      images.forEach(function (item) {
+        if (Object.values(item).includes("lvl2")) {
           setImages(level3);
+          setCurrentScore(currentScore);
+          console.log(images.length);
+        }
+      });
+    } else if (currentScore === 25) {
+      images.forEach(function (item) {
+        if (Object.values(item).includes("lvl3")) {
+          setImages(level4);
+          setCurrentScore(currentScore);
           console.log(images.length);
         }
       });
     }
+    // else if (currentScore > 11) {
+    //   images.forEach((item) =>
+    //     Object.values(item).includes("lvl2")
+    //       ? setImages(level3)
+    //       : console.log("do nothing")
+    //   );
+    // }
     sendData();
   }, [images]);
 
