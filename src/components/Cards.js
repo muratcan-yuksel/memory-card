@@ -235,6 +235,8 @@ const Cards = (props) => {
           console.log(images.length);
         }
       });
+    } else if (currentScore === 44) {
+      alert("Kudos to you!");
     }
     // else if (currentScore > 11) {
     //   images.forEach((item) =>
