@@ -216,7 +216,6 @@ const Cards = (props) => {
         if (Object.values(item).includes("lvl1")) {
           setImages(level2);
           setCurrentScore(currentScore);
-          console.log(images.length);
         }
       });
     } else if (currentScore === 11) {
@@ -224,7 +223,6 @@ const Cards = (props) => {
         if (Object.values(item).includes("lvl2")) {
           setImages(level3);
           setCurrentScore(currentScore);
-          console.log(images.length);
         }
       });
     } else if (currentScore === 25) {
@@ -232,19 +230,12 @@ const Cards = (props) => {
         if (Object.values(item).includes("lvl3")) {
           setImages(level4);
           setCurrentScore(currentScore);
-          console.log(images.length);
         }
       });
     } else if (currentScore === 44) {
       alert("Kudos to you!");
     }
-    // else if (currentScore > 11) {
-    //   images.forEach((item) =>
-    //     Object.values(item).includes("lvl2")
-    //       ? setImages(level3)
-    //       : console.log("do nothing")
-    //   );
-    // }
+
     sendData();
   }, [images]);
 
