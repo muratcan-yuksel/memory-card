@@ -6,10 +6,10 @@ const ScoreBoard = (props) => {
       <div className="jumbotron text-center">Philosopher Card Game</div>
       <div className="container">
         <div className="row">
-          <div className="col-6 border borderprimary text-center">
+          <div className="col-6 border border-dark text-center">
             Current Score: {props.currentData}
           </div>
-          <div className="col-6 border border-danger text-center">
+          <div className="col-6 border border-dark text-center">
             Best Score:{props.bestData}
           </div>
         </div>
