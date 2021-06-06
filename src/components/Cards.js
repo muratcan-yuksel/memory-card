@@ -189,6 +189,7 @@ const Cards = (props) => {
       //empty the selected items array
       setSelectedItems((selectedItems) => (selectedItems = []));
       setCurrentScore((currentScore) => (currentScore = 0));
+      setImages(level1);
       //if I don't do this, the score starts with 1 on mount
     } else if (result === false && selectedItems.length !== 0) {
       console.log(
